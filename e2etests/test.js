@@ -1,6 +1,7 @@
 /* global describe, it, browser */
 import { shallow } from 'enzyme';
-
+import React from 'react';
+import AddTodo from '../src/components/addTodo/index';
 
 const { expect } = require('chai');
 

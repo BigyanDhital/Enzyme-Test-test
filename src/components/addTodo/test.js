@@ -1,10 +1,17 @@
-/* global expect, it, describe */
+/* global expect, it, describe, jest, beforeEach */
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import AddTodo from '.';
 
 describe('AddTodo component', () => {
+  let component;
+  const submitMock = jest.fn();
+
+  beforeEach(() => {
+    component = shallow(<AddTodo submitTodo={submitMock} />);
+  });
+
   it('Should render successfully', () => {
     const component = shallow(<AddTodo />);
     expect(component.exists()).toEqual(true);
