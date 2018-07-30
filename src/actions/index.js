@@ -15,6 +15,12 @@ const actions = {
       text,
     };
   },
+  deleteTodo(id){
+    return{
+      type:types.DELETE_TODO,
+      id,
+    }
+  }
 };
 
 export default actions;
